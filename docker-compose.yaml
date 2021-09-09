@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  api:
+    image: openresty/openresty:alpine
+    volumes:
+    - "./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf"
+    - "./demoapps:/opt/demoapps"
+    ports:
+    - "80:80"
+ 
